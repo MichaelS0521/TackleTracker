@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240425200122"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "waterType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "weight",
+      "fieldType": "Float"
+    }
+  ],
+  "name": "FishData",
+  "relationships": [
+    {
+      "otherEntityName": "createdCatch",
+      "otherEntityRelationshipName": "fish",
+      "relationshipName": "createdCatch",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

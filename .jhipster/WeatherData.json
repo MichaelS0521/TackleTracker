@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240425200123"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "condition",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "temperature",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "dateStamp",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "WeatherData",
+  "relationships": [
+    {
+      "otherEntityName": "createdCatch",
+      "otherEntityRelationshipName": "weather",
+      "relationshipName": "createdCatch",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

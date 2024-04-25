@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240425200124"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hard",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "soft",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "BaitData",
+  "relationships": [
+    {
+      "otherEntityName": "createdCatch",
+      "otherEntityRelationshipName": "baitdata",
+      "relationshipName": "catches",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

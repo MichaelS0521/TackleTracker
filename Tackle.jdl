@@ -1,0 +1,41 @@
+entity UserProfile {
+  email String
+}
+
+entity CreatedCatch {
+  datestamp LocalDate,
+  location String
+}
+
+entity FishData {
+  name String,
+  waterType String,
+  weight Float
+}
+
+entity WeatherData {
+  condition String,
+  temperature Double,
+  dateStamp LocalDate
+}
+
+entity BaitData {
+  type String,
+  color String,
+  hard Boolean,
+  soft Boolean
+}
+
+// Relationships
+relationship OneToOne {
+  FishData{createdCatch} to CreatedCatch{fish}
+}
+
+relationship OneToMany {
+ WeatherData{createdCatch} to CreatedCatch{weather},
+ UserProfile{catches} to CreatedCatch{user}
+}
+
+relationship ManyToMany {
+  CreatedCatch{baitdata} to BaitData{catches}
+}

@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240425200120"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    }
+  ],
+  "name": "UserProfile",
+  "relationships": [
+    {
+      "otherEntityName": "createdCatch",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "catches",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

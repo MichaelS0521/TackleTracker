@@ -1,0 +1,48 @@
+{
+  "annotations": {
+    "changelogDate": "20240425200121"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "datestamp",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CreatedCatch",
+  "relationships": [
+    {
+      "otherEntityName": "baitData",
+      "otherEntityRelationshipName": "catches",
+      "relationshipName": "baitdata",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "fishData",
+      "otherEntityRelationshipName": "createdCatch",
+      "relationshipName": "fish",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "weatherData",
+      "otherEntityRelationshipName": "createdCatch",
+      "relationshipName": "weather",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "catches",
+      "relationshipName": "user",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}
