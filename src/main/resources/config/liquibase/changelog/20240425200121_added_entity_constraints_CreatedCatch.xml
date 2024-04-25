@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity CreatedCatch.
+    -->
+    <changeSet id="20240425200121-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="created_catch_id"
+                                 baseTableName="rel_created_catch__baitdata"
+                                 constraintName="fk_rel_created_catch__baitdata__created_catch_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="created_catch"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="baitdata_id"
+                                 baseTableName="rel_created_catch__baitdata"
+                                 constraintName="fk_rel_created_catch__baitdata__baitdata_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bait_data"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="weather_id"
+                                 baseTableName="created_catch"
+                                 constraintName="fk_created_catch__weather_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weather_data"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="created_catch"
+                                 constraintName="fk_created_catch__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>
