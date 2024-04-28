@@ -17,10 +17,23 @@ export const Home = () => {
       </Col>
       <Col md="9">
         <h1 className="display-4">Welcome to Tackle Tracker!</h1>
-        <p className="lead">Use the links Below!</p>
-        <p className="lead">Special Message</p>
+        <p> </p>
+        <div className="box">
+          <h2 className="weather-title"> Current Weather |</h2>
+          <h3 className="weather">Condition - cloudy 🌤</h3>
+          <h3 className="weather">Tempature - 70 ℉</h3>
+          <h3 className="weather">Cloud - 60%</h3>
+        </div>
+        <p> </p>
         {account?.login ? (
           <div>
+            <div className="boxy">
+              <h2 className="bait-title">Baits of the Day</h2>
+              <h3 className="bait-text">CrankBait - Red - ShallowDiver</h3>
+              <h3 className="bait-text">Senko - Black/Blue - 4.25 inch</h3>
+              <h3 className="bait-text">Swimbait - White - 4.25 inch</h3>
+            </div>
+            <p> </p>
             <Alert color="success">You are logged in as user &quot;{account.login}&quot;.</Alert>
           </div>
         ) : (
@@ -44,7 +57,6 @@ export const Home = () => {
             </Alert>
           </div>
         )}
-        <p>If you have any question on JHipster:</p>
       </Col>
     </Row>
   );

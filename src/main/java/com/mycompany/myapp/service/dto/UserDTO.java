@@ -1,6 +1,7 @@
 package com.mycompany.myapp.service.dto;
 
 import com.mycompany.myapp.domain.User;
+import com.mycompany.myapp.domain.UserProfile;
 import java.io.Serializable;
 
 /**

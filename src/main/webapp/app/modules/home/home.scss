@@ -8,3 +8,109 @@ Main page styles
   background: url('/content/images/fulllogo_transparent_nobuffer.png') no-repeat center top;
   background-size: contain;
 }
+
+/*
+=====================
+Title Display
+=====================
+*/
+
+.display-4 {
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  margin-left: 12rem;
+  text-shadow: rgb(21, 109, 105) 2px 5px;
+  font-weight: bold;
+}
+
+/*
+=====================
+Weather Data Display
+=====================
+*/
+
+.weather-title {
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+  border: solid 3px black;
+  // background-color: rgb(0, 255, 255);
+  background: url('/content/images/4K-Weather-Best-Wallpaper.png') no-repeat center top;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  padding: 3px;
+}
+
+.weather {
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 2rem;
+  // margin-right: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.box {
+  height: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin-left: 6rem;
+  // background-color: rgb(18, 203, 210);
+  background: url('/content/images/4K-Weather-Best-Wallpaper.png') no-repeat center top;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  padding: 3px;
+  border: solid 3px black;
+  box-shadow: 10px 5px 5px rgb(150, 94, 25);
+}
+
+/*
+==================
+Bait Data Display
+==================
+*/
+
+.bait-title {
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-weight: bold;
+  border: solid 3px rgb(0, 0, 0);
+  background: url('/content/images/fishing-lures-feature.png') no-repeat center top;
+  background-attachment: fixed;
+  mix-blend-mode: luminosity;
+  // background-color: rgb(0, 255, 47);
+  padding: 0.5px;
+}
+
+.bait-text {
+  color: #ffffff;
+  display: list-item;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.boxy {
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  margin-left: 14rem;
+  background: url('/content/images/fishing-lures-feature.png') no-repeat center top;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  object-fit: fill;
+  // background-color: rgb(53, 157, 50);
+  padding: 3px;
+  border: solid 3px black;
+  box-shadow: 10px 5px 5px rgb(103, 173, 166);
+}

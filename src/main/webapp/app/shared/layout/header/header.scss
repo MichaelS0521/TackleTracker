@@ -61,7 +61,7 @@ Navbar styles
     }
   }
   a.nav-link {
-    font-weight: 400;
+    font-weight: 900;
     > span {
       margin-left: 5px;
     }
@@ -95,17 +95,17 @@ Navbar styles
     text-decoration: none;
   }
   .brand-icon {
-    height: 35px;
+    height: 65px;
     width: auto;
     display: inline-block;
     img {
-      width: 45px;
+      width: 80px;
     }
   }
 }
 
 .brand-title {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   margin-left: 0.25rem;
   color: $header-color;
   &:hover {
@@ -115,7 +115,7 @@ Navbar styles
 }
 
 .loading-bar {
-  height: 3px;
+  height: 4px;
   background-color: #009cd8;
   position: absolute;
   top: 0px;
