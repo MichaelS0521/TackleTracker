@@ -1,13 +1,21 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
-.hipster {
-  display: inline-block;
-  width: 100%;
-  height: 400px;
-  background: url('/content/images/fulllogo_transparent_nobuffer.png') no-repeat center top;
-  background-size: contain;
-}
+// .hipster {
+//   display: inline-block;
+//   width: 100%;
+//   height: 400px;
+//   background: url('/content/images/fulllogo_transparent_nobuffer.png') no-repeat center top;
+//   background-size: contain;
+// }
+
+// .base-background {
+//   background-image: url('/content/images/fulllogo_transparent_nobuffer.png') no-repeat center top;
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   float: left;
+//   width: auto;
+// }
 
 /*
 =====================
@@ -34,7 +42,7 @@ Weather Data Display
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
-  margin-left: 1rem;
+  // margin-left: 1rem;
   margin-right: 1rem;
   font-weight: bold;
   border: solid 3px black;

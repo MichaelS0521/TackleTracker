@@ -22,31 +22,31 @@ a {
   }
 }
 
-.app-container {
-  box-sizing: border-box;
-  .view-container {
-    width: 100%;
-    height: calc(100% - 40px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 1rem;
-    .card {
-      padding: 1rem;
-    }
-    .view-routes {
-      height: 100%;
-      > div {
-        height: 100%;
-      }
-    }
-  }
-}
+// .app-container {
+//   box-sizing: border-box;
+//   .view-container {
+//     width: 100%;
+//     height: calc(100% - 40px);
+//     overflow-y: auto;
+//     overflow-x: hidden;
+//     padding: 1rem;
+//     .card {
+//       padding: 1rem;
+//     }
+//     .view-routes {
+//       height: 100%;
+//       > div {
+//         height: 100%;
+//       }
+//     }
+//   }
+// }
 
 .fullscreen {
   position: fixed;
   top: 100px;
   left: 0px;
-  width: 99% !important;
+  width: 100% !important;
   height: calc(100vh - 110px) !important;
   margin: 5px;
   z-index: 1000;
