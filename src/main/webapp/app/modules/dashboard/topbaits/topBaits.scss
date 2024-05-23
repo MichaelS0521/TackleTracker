@@ -1,0 +1,22 @@
+.baits {
+  color: black;
+  font-size: 30px;
+}
+
+.baits-container {
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 16px; /* Space between items */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.baits-item {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.682); /* Light background color for better visibility */
+  padding: 16px; /* Padding inside each item */
+  border: 3px solid #056d17; /* Border around each item */
+  border-radius: 8px; /* Rounded corners */
+  flex: 0 0 auto; /* Do not grow or shrink, maintain initial width */
+  width: 200px; /* Fixed width of items */
+}
