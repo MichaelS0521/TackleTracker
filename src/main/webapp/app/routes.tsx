@@ -15,6 +15,8 @@ import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 import Dashboard from './modules/dashboard/dashboard';
+import CreatedCatch from './entities/created-catch/created-catch';
+import Create from './modules/dashboard/createdCatch/create';
 
 const loading = <div>loading ...</div>;
 
@@ -29,47 +31,56 @@ const Admin = Loadable({
 });
 const AppRoutes = () => {
   return (
-    // <div className="view-routes">
-    <ErrorBoundaryRoutes>
-      <Route index element={<Home />} />
-      <Route path="login" element={<Login />} />
-      <Route path="logout" element={<Logout />} />
-      <Route path="dashboard" element={<Dashboard />} />
-      <Route path="account">
+    <div className="view-routes">
+      <ErrorBoundaryRoutes>
+        <Route index element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="logout" element={<Logout />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="create" element={<Create />} />
+        <Route path="account">
+          <Route
+            path="*"
+            element={
+              <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]}>
+                <Account />
+              </PrivateRoute>
+            }
+          />
+          <Route path="register" element={<Register />} />
+          <Route path="activate" element={<Activate />} />
+          <Route path="reset">
+            <Route path="request" element={<PasswordResetInit />} />
+            <Route path="finish" element={<PasswordResetFinish />} />
+          </Route>
+        </Route>
         <Route
-          path="*"
+          path="admin/*"
           element={
-            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]}>
-              <Account />
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN]}>
+              <Admin />
             </PrivateRoute>
           }
         />
-        <Route path="register" element={<Register />} />
-        <Route path="activate" element={<Activate />} />
-        <Route path="reset">
-          <Route path="request" element={<PasswordResetInit />} />
-          <Route path="finish" element={<PasswordResetFinish />} />
-        </Route>
-      </Route>
-      <Route
-        path="admin/*"
-        element={
-          <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN]}>
-            <Admin />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="*"
-        element={
-          <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
-            <EntitiesRoutes />
-          </PrivateRoute>
-        }
-      />
-      <Route path="*" element={<PageNotFound />} />
-    </ErrorBoundaryRoutes>
-    // </div>
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]}>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <PrivateRoute hasAnyAuthorities={[AUTHORITIES.USER]}>
+              <EntitiesRoutes />
+            </PrivateRoute>
+          }
+        />
+        <Route path="*" element={<PageNotFound />} />
+      </ErrorBoundaryRoutes>
+    </div>
   );
 };
 

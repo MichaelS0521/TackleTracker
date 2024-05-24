@@ -20,3 +20,20 @@
   flex: 0 0 auto; /* Do not grow or shrink, maintain initial width */
   width: 200px; /* Fixed width of items */
 }
+
+.fishes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.fishes-item {
+  background-color: #f0f0f0;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 200px;
+}

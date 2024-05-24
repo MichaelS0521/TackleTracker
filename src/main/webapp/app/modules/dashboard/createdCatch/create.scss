@@ -1,0 +1,41 @@
+form {
+  height: 520px;
+  width: 400px;
+  display: inline-block;
+  background-color: rgba(92, 228, 199, 0.185);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+.username {
+  color: black;
+}
+
+.submit-button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fish-type {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  width: 300px;
+  border-radius: 10px;
+}
